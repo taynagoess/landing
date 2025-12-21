@@ -1,0 +1,31 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
+.slider {
+    img {
+        display: block;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.slick-slide { 
+    outline: none;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-slide > div {
+    display: flex;
+    padding: 1rem !important;
+    margin: .5rem;
+}
+
+.slick-track { display: flex; }
+
+.slick-slide { height: inherit !important; }

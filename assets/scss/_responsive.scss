@@ -1,0 +1,18 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
+@media (max-width: 640px) {
+    .nav {
+        gap: 0.8rem;
+        flex-wrap: wrap;
+    }
+
+    .nav__actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .intro {
+        padding-top: 5.2rem;
+    }
+}

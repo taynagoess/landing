@@ -1,0 +1,30 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
+@keyframes zoom {
+    from {
+        transform: scale(.92);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn{
+  from{ transform: scale(.92); opacity: 0; }
+  to{ transform: scale(1); opacity: 1; }
+}
+
+[data-animate] {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: .55s ease;
+}
+
+[data-animate].active {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,32 @@
+// BEGIN [.variables] ###############################
+$bg-primary: #e84c78 !default;
+$bg-secondary: #ff94a6 !default;
+$bg-accent: #e91e63 !default;
+$color-primary: #804942 !default;
+$color-secondary: #fff0f6 !default;
+$color-white: #ffffff !default;
+$color-black: #000000 !default;
+$primary: #e91e63;
+$secondary: #ffd6e8;
+
+$dark: #222 !default;
+$cardShadow: 0 10px 25px rgba(0,0,0,.08);
+$shadow: 0 0.625rem 1.75re rgba(0, 0, 0, 0.03);
+// END   [.variables] ###############################
+
+$balloon-colors: (
+    1: (#eaeaeae6, #c7c3c3e6),
+    2: (#e8dab2e6, #d5c7a1),
+    3: (#dd6e42e3, #cf6840),
+    4: (#4f6d7ad6, #4f6d7a),
+    5: (#eaeaeae6, #cbc8c8)
+);
+
+$animations: (
+    1: balloon1 15s ease infinite,
+    2: balloon2 5s ease infinite,
+    3: balloon3 10s ease infinite,
+    4: balloon4 5s ease infinite,
+    5: balloon5 15s ease infinite,
+    6: balloon7 5s ease infinite
+);

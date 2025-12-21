@@ -1,0 +1,15 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
+#fotos {
+    .section {
+        &__title {
+            margin-bottom: .5rem;
+        }
+
+        &__subtitle{
+            margin-bottom: 1.375rem;
+            opacity: .85;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.grid { @include d-grid(12); }
+
+.card {
+    background: $color-white;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    padding: 1.1rem 1.1rem;
+    border: 1px solid rgba(0, 0, 0, .05);
+
+    h3 {
+        color: $color-primary;
+        font-size: 1.125rem;
+    }
+
+    &--clickable {
+        cursor: pointer;
+        transition: transform .25s ease, box-shadow .25s ease;
+
+        &:hover {
+            transform: translateY(-0.25rem);
+            box-shadow: 0 .875rem 2.1875rem rgba(0, 0, 0, .10);
+        }
+    }
+}

@@ -1,0 +1,148 @@
+@use "sass:math";
+@use "sass:meta";
+@use "sass:color";
+@use "_variables" as *;
+@use "_mixins" as *;
+
+@forward "_base";
+@forward "_intro";
+@forward "_keyframes";
+@forward "_card";
+@forward "_modal";
+@forward "_momments";
+@forward "_photos";
+@forward "_responsive";
+@forward "_sections";
+
+// #fotos .container{
+//   max-width: 1100px;
+//   margin: 0 auto;
+//   padding: 0 16px;
+// }
+
+.footer {
+  background: $bg-accent;
+  color: $color-white;
+  text-align: center;
+  padding: 22px 10px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer smal {
+  font: size 10px;
+  font-style: italic;
+}
+
+.versiculos {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.btn-sortear {
+  background: #f4a6c1;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn-sortear:hover {
+  background: #e98bb0;
+  transform: scale(1.05);
+}
+
+.versiculo-sorteado {
+  margin-top: 30px;
+  background: #fff0f5;
+  padding: 20px;
+  border-radius: 15px;
+  display: none;
+}
+
+.frase {
+  font-style: italic;
+  color: #8b3a62;
+  margin-bottom: 10px;
+}
+
+#texto-versiculo {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+#versiculos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 18px;
+}
+
+.countdown-overlay.active{
+  display: flex;
+}
+
+.countdown-box{
+  width: 100%;
+  max-width: 360px;
+  border-radius: 18px;
+  padding: 18px 16px;
+  text-align: center;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 18px 50px rgba(0,0,0,.25);
+}
+
+body.theme-dark .countdown-box{
+  background: rgba(18,18,18,.92);
+}
+
+.countdown-title{
+  font-size: 14px;
+  opacity: .85;
+  margin-bottom: 8px;
+}
+
+.countdown-number{
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 6px 0 10px;
+  transform: scale(1);
+  animation: pop .6s ease both;
+}
+
+.countdown-sub{
+  font-size: 13px;
+  opacity: .8;
+}
+
+@keyframes pop{
+  0% { transform: scale(.7); opacity: .3; }
+  60%{ transform: scale(1.12); opacity: 1; }
+  100%{ transform: scale(1); }
+}
+
+.countdown-number.pop{
+  animation: pop .6s ease both;
+}

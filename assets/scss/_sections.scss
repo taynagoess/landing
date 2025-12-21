@@ -1,0 +1,16 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
+.section {
+    padding: 1.2rem 0;
+
+    &__title {
+        margin: 0 0 1rem;
+        font-size: clamp(1.3rem, 2.3vw, 1.8rem);
+    }
+
+    &__subtitle {
+        margin: 0 0 1.6rem;
+        opacity: .85;
+    }
+}

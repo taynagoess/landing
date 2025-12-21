@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Feliz Aniversário 🎉</title>
+        <link rel="icon" href="./assets/images/1.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/1.png" />
+        <meta name="theme-color" content="#ff69b4" />
+        <meta name="description" content="Um espaço especial com fotos, mensagens e surpresas para você." />
+        <meta property="og:title" content="Feliz Aniversário 🎉" />
+        <meta property="og:description" content="Um espaço especial com fotos, mensagens e surpresas para você." />
+        <meta property="og:image" content="./assets/images/1.png" />
+        <meta property="og:url" content="https://example.com/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Feliz Aniversário 🎉" />
+        <meta name="twitter:description" content="Um espaço especial com fotos, mensagens e surpresas para você." />
+        <meta name="twitter:image" content="./assets/images/1.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/header.css" />
+        <noscript><meta http-equiv="refresh" content="0;url=/erro/noscript"></noscript>
+        <script src="https://kit.fontawesome.com/a2b5e3c9d7.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="theme-romantic">
+        <audio id="bgMusic" preload="auto">
+            <source src="assets/audio/musica.mp3" type="audio/mpeg">
+        </audio>
+
+        <button id="musicToggle" class="btn-music">🔊</button>
+        <div class="start" id="startScreen">
+            <button class="button-with-icon" id="playBtn" type="button">
+                <svg class="icon" id="Play" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ffffff" d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z"></path>
+                </svg>
+                <span class="text">Play</span>
+            </button>
+        </div>
+
+        <div id="countdownOverlay" class="countdown-overlay" aria-hidden="true">
+            <div class="countdown-box">
+                <div class="countdown-title">CALMAAA AI</div>
+                <div id="countdownNumber" class="countdown-number">10</div>
+                <div class="countdown-sub">Preparando... ✨</div>
+            </div>
+        </div>
+
+
+        <main id="landing" class="landing-hidden">
+            <header class="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <nav class="site-nav">
+                                <h1 class="logo">
+                                    <i class="fa-solid fa-cake-candles"></i>
+                                    Feliz Aniversário
+                                </h1>
+                                <button class="nav-toggle" type="button" aria-label="Menu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <ul class="menu">
+                                    <li class="menu-item">
+                                        <a href="#" data-scroll="topo"><i class="fa-solid fa-house"></i> Home</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#fotos" data-scroll="#fotos"><i class="fa-solid fa-camera-retro"></i> Momentos</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#versiculos" data-scroll="#versiculos"><i class="fa-solid fa-book-bible"></i> Mensagens</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#caixinhas" data-scroll="#caixinhas"><i class="fa-solid fa-gift"></i> Caixinhas</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#surpresa" data-scroll="#surpresa"><i class="fa-solid fa-cake-candles"></i> Surpresa</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <label class="switch">
+                                            <input id="switch" type="checkbox" />
+                                            <span class="slider"></span>
+                                            <span class="decoration"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-overlay" aria-hidden="true"></div>
+            </header>
+
+            <section class="intro">
+                <div class="container" style="position: relative; z-index: 2">
+                    <h1>Feliz Aniversário 🎉</h1>
+                    <img src="./assets/images/1.png" alt="Imagem" class="img-intro">
+
+                    <div class="section" style="padding: 1.2rem 0 0">
+                        <div id="counter" class="counter">0</div>
+                    </div>
+                </div>
+
+                <div class="balloons" aria-hidden="true"></div>
+            </section>
+
+            <main>
+                <section class="section" id="contato">
+                    <div class="container">
+                        <h2 class="section__title" data-animate>
+                            💌 Carta
+                        </h2>
+                        <div class="card" data-animate>
+                            <p style="margin: 0; white-space: pre-line">
+                                Escrever ainda..
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section" id="caixinhas">
+                    <div class="container">
+                        <h2 class="section__title" data-animate>🎁 Caixinhas</h2>
+                        <div class="cards" id="boxesList"></div>
+                    </div>
+                </section>
+
+                <section class="section" id="versiculos">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="section__title" data-animate>📖 Versículos</h2>
+                                <div class="versiculo-content">
+                                    <p class="section__subtitle" data-animate>
+                                        Encontre inspiração e conforto nas palavras sagradas.
+                                    </p>
+                                    <button id="btn-sortear" class="btn">
+                                        ✨ Sortear versículo
+                                    </button> <br><br>
+                                </div>
+                                <div id="versiculo-random" class="versiculo-box" style="display:none;">
+                                    <p id="texto-versiculo"></p>
+                                </div>
+                                <div class="cards" id="versesList"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+               <section class="section" id="fotos">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="section__title" data-animate>📸 Fotos</h2>
+                                <p class="section__subtitle" data-animate>
+                                    Alguns dos nossos tantos momentos juntos, porque temos mais histórias para contar e viver!
+                                </p>
+                                <div class="slider">
+                                    <div class="slide"><div class="card"><img src="./assets/images/2.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/3.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/4.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/5.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/6.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/7.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/8.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/9.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/10.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/11.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/12.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/13.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/14.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/15.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/16.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/17.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/18.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/19.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/20.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/21.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/22.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/23.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/24.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/25.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/26.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/27.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/28.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/29.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/30.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/31.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/32.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/33.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/34.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/35.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/36.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/37.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/38.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/39.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/40.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/41.jpeg" alt=""></div></div>
+                                    <div class="slide"><div class="card"><img src="./assets/images/42.jpeg" alt=""></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                 <section class="section" id="surpresa">
+                    <div class="container surprise">
+                        <h2 class="section__title" data-animate>🎉 Surpresa</h2>
+                        <button class="btn" id="surpriseBtn" type="button" data-animate>
+                            Clique para Abrir
+                        </button>
+                    </div>
+                </section>
+            </main>
+
+            <div id="overlay" aria-hidden="true">
+                <div
+                    class="overlay__content"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="overlayTitle"
+                >
+                    <div class="overlay__top">
+                        <button class="overlay__close" type="button" aria-label="Fechar">×</button>
+                    </div>
+                    <h3 id="overlayTitle" style="margin: 0"></h3>
+                    <div id="overlayBody"></div>
+                </div>
+            </div>
+
+            <div class="image-modal" id="imageModal" aria-hidden="true">
+                <span class="image-modal__close">&times;</span>
+                <img class="image-modal__img" alt="">
+            </div>
+
+            <footer class="footer">
+                <p>Feito para você: Sra Ramos</p>
+                <strong>Te amo muito</strong>
+                <p>© 2025 — <small>Desenvolvido por: Tayná Goes</small></p>
+            </footer>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+        <script src="./assets/js/app.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+        <script>
+            $(function () {
+            $('.slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false,
+                arrows: false,
+                speed: 300,
+                adaptiveHeight: false,
+                autoplay: true,
+                responsive: [
+                { breakpoint: 900, settings: { slidesToShow: 2 } },
+                { breakpoint: 600, settings: { slidesToShow: 1, arrows: false } }
+                ]
+            });
+            });
+        </script>
+    </body>
+</html>
